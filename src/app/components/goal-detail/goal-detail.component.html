@@ -1,0 +1,29 @@
+<div class="grid mt-5">
+  <div class="col-12">
+      <div class="p-fluid grid flex align-items-center justify-content-center flex-direction-column">
+        <div class="col-10">
+          <label for="target" class="text-sm">Target Date</label>
+          <p-calendar dateFormat="yy-mm-dd" [(ngModel)]="careerGoalModel.target_date" class="p-inputtext-sm" inputId="basic"></p-calendar>
+        </div>
+        <div class="col-10">
+          <label for="complete" class="text-sm">Completed Date</label>
+          <p-calendar dateFormat="yy-mm-dd" [(ngModel)]="careerGoalModel.date_completed" class="p-inputtext-sm" inputId="basic"></p-calendar>
+        </div>
+        <div class="col-10">
+          <label for="name" class="text-sm">Name</label>
+          <input id="name" [(ngModel)]="careerGoalModel.name" type="text" class="text-base text-color  p-2 border-1 border-solid dark-border border-round appearance-none outline-none focus:border-primary w-full">
+        </div>
+        <div class="col-10">
+          <label for="des" class="text-sm">Description</label>
+          <textarea pInputTextarea [(ngModel)]="careerGoalModel.desc"></textarea>
+        </div>
+        <div class="col-10">
+          <label for="text" class="text-sm">Reason</label>
+          <textarea pInputTextarea [(ngModel)]="careerGoalModel.reason"></textarea>
+        </div>
+        <div class="col-10 mt-4">
+          <button pButton type="button" label="Save" class="p-button-sm" (click)="save()"></button>
+        </div>
+      </div>
+  </div>
+</div>

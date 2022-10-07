@@ -1,0 +1,243 @@
+<!-- HEADER-->
+
+<div class="header-container" (scroll)="onScroll($event)">
+  <div class="curve-header">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path fill="#0099ff" fill-opacity="1" d="M0,256L80,224C160,192,320,128,480,117.3C640,107,800,149,960,165.3C1120,181,1280,171,1360,165.3L1440,160L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
+    </svg>
+  </div>
+  <div class="grid">
+    <div class="col-12 flex justify-content-around align-items-center">
+      <div class="xl:col-6 sm:col-4">
+        <h5 class="xl:text-xl md:text-base sm:text-xs">CURRICULUM VITAE</h5>
+      </div>
+      <div class="xl:col-6 sm:col-8 flex justify-content-between align-items-center gap-4">
+        <div >
+          <p class="xl:text-base md:text-sm sm:text-xs"><a routerLink="/software/home" >Home</a></p>
+          
+        </div>
+        <div >
+          <p class="xl:text-base md:text-sm sm:text-xs"><a routerLink="/software/career-goals" >Career Goal</a></p>
+        </div>
+        <div >
+          <p class="xl:text-base md:text-sm sm:text-xs"><a (click)="logout()" >Logout</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- END OF HEADER-->
+
+
+<!-- CONTENT-->
+
+  <div class="grid home-container">
+    <div class="col-12 flex justify-content-center align-items-center flex-row gap-2">
+      <div class="xl:col-6 sm:col-12">
+        <div class="detail">
+          <p class="text-center xl:text-2xl sm:text-xl headings">Jerwin Fortillano</p>
+          <p class="text-center xl:text-xl sm:text-base p-2 text-blue-300">Bachelor of Science in Information System</p>
+          <div class="flex justify-content-center align-items-center pt-2 gap-4">
+            <button pButton type="button" label="See more info.." class="p-button-sm z-1" (click)="goToCv()"></button>
+            <button pButton type="button" label="View my Career Goal" class="p-button-sm z-1" (click)="goToCareerGoal()"></button>
+          </div>
+        </div>
+      </div>
+      <div class="col-5 xl:block sm:hidden scalein animation-duration-1000 animation-iteration-1">
+        <div class="profile-image flex justify-content-center">
+          <img src="../../../assets/images/profile.jpg" alt="profile">
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 flex justify-content-cneter align-items-center flex-column gap-2 mt-2">
+      <div class="col-12">
+        <h5 class="headings text-center xl:text-1xl sm:text-base p-3 mt-5">OBJECTIVES</h5>
+        <div class="divider"></div>
+      </div>
+      <div class="col-12 flex flex-row justify-content-center align-items-center mt-4">
+        <div class="col-8 fadeinright animation-duration-2000 animation-iteration-1 animation-delay-100 animation-ease-in">
+          <p class="text-base text-center p-2 line-height-4 font-light">To develop my career in a reputable company with integrity and with an opportunity for personal and professional development. To combine my communication skills, my programming and software development skills, and my strong desire to serve the people in my community in a package that will help the organization to become the best organization it can possibly be.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 flex justify-content-cneter align-items-center flex-column gap-2 mt-2" *ngIf="loadSeminars">
+      <div class="col-12">
+        <h5 class="headings text-center xl:text-1xl sm:text-base p-3 mt-5">SEMINARS AND WORKSHOP</h5>
+        <div class="divider"></div>
+      </div>
+      <div class="col-12 flex flex-row justify-content-around align-items-center mt-4 flex-wrap">
+        <div class="xl:col-3 sm:col-12 fadeinleft animation-duration-2000 animation-iteration-1 content-divider animation-delay-300">
+          <div class="content">
+            <img src="../../../assets/images/network_tech.svg" alt="seminar">
+            <p class="text-center text-sm p-2">Seminar on Network Tech (CHMSU GYM) - 2019</p>
+          </div>
+          <div class="divider"></div>
+        </div>
+        <div class="xl:col-3 sm:col-12 scalein animation-duration-2000 animation-iteration-1 content-divider animation-delay-300">
+          <div class="content">
+            <img src="../../../assets/images/outsourcing.svg" alt="seminar">
+            <p class="text-center text-sm p-2">Seminar on Knowledge Process Outsourcing (CHMSU GYM) 2019</p>
+          </div>
+          <div class="divider"></div>
+        </div>
+        <div class="xl:col-3 sm:col-12 fadeinright animation-duration-2000 animation-iteration-1 content-divider animation-delay-300">
+          <div class="content">
+            <img src="../../../assets/images/augmented.svg" alt="seminar">
+            <p class="text-center text-sm p-2">Seminar on Augmented and Virtual Reality (CHMSU Gym) 2019</p>
+          </div>
+          <div class="divider"></div>
+        </div>
+      </div>
+
+      <div class="col-12 flex flex-row justify-content-around align-items-center mt-4 flex-wrap">
+        <div class="xl:col-3 sm:col-12 fadeinleft animation-duration-2000 animation-iteration-1 content-divider animation-delay-300">
+          <div class="content">
+            <img src="../../../assets/images/internet_of_Things.svg" alt="seminar">
+            <p class="text-center text-sm p-2">Seminar on Internet of Things (CHMSU Gym) – 2019</p>
+          </div>
+          <div class="divider"></div>
+        </div>
+        <div class="xl:col-3 sm:col-12 scalein animation-duration-2000 animation-iteration-1 content-divider animation-delay-300">
+          <div class="content">
+            <img src="../../../assets/images/game_dev.svg" alt="seminar">
+            <p class="text-center text-sm p-2">Seminar on Game Development (CHMSU Gym) – 2019</p>
+          </div>
+          <div class="divider"></div>
+        </div>
+        <div class="xl:col-3 sm:col-12 fadeinright animation-duration-2000 animation-iteration-1 content-divider animation-delay-300">
+          <div class="content">
+            <img src="../../../assets/images/web_trends.svg" alt="seminar">
+            <p class="text-center text-sm p-2">Seminar on Web Trends (CHMSU Gym) – 2019</p>
+          </div>
+          <div class="divider"></div>
+        </div>
+      </div>
+
+      <div class="col-12 flex flex-row justify-content-around align-items-center mt-4 flex-wrap">
+        <div class="xl:col-3 sm:col-12 fadeinleft animation-duration-2000 animation-iteration-1 content-divider animation-delay-300">
+          <div class="content">
+            <img src="../../../assets/images/work-ethics.svg" alt="seminar">
+            <p class="text-center text-sm p-2">Seminar on Personality Development and Work Ethics (CHMSU Gym) – 2019</p>
+          </div>
+          <div class="divider"></div>
+        </div>
+        <div class="xl:col-3 sm:col-12 fadeinright animation-duration-2000 animation-iteration-1 content-divider animation-delay-300">
+          <div class="content">
+            <img src="../../../assets/images/programming_trends.svg" alt="seminar">
+            <p class="text-center text-sm p-2">Seminar on Programming Trends (CMHSU Gym) – 2019</p>
+          </div>
+          <div class="divider"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 flex justify-content-cneter align-items-center flex-column gap-2 mt-2"  *ngIf="loadSkills">
+      <div class="col-12">
+        <h5 class="headings text-center xl:text-1xl sm:text-base p-3 mt-5">SKILLS AND ABILITIES</h5>
+        <div class="divider"></div>
+      </div>
+
+      <div class="col-12 flex flex-row justify-content-around align-items-center mt-4 flex-wrap">
+        <div class="xl:col-3 sm:col-12 fadeinleft animation-duration-2000 animation-iteration-1 content-divider animation-delay-300">
+          <div class="content">
+            <img src="../../../assets/images/react.png" alt="seminar">
+            <p class="text-center text-sm p-2">Basic React JS - JavaScript Framework</p>
+          </div>
+          <div class="divider"></div>
+        </div>
+        <div class="xl:col-3 sm:col-12 fadeinleft animation-duration-2000 animation-iteration-1 content-divider animation-delay-300">
+          <div class="content">
+            <img src="../../../assets/images/js_css_html.png" alt="seminar">
+            <p class="text-center text-sm p-2">Native JavaScript, HTML5 & CSS / SCSS - Web Design</p>
+          </div>
+          <div class="divider"></div>
+        </div>
+        <div class="xl:col-3 sm:col-12 fadeinright animation-duration-2000 animation-iteration-1 content-divider animation-delay-300">
+          <div class="content">
+            <img src="../../../assets/images/angular.webp" alt="seminar">
+            <p class="text-center text-sm p-2">Angular 10+ - JavaScript / TypeScript Framework</p>
+          </div>
+          <div class="divider"></div>
+        </div>
+      </div>
+
+      <div class="col-12 flex flex-row justify-content-around align-items-center mt-4 flex-wrap">
+        <div class="xl:col-3 sm:col-12 fadeinleft animation-duration-2000 animation-iteration-1 content-divider animation-delay-300">
+          <div class="content">
+            <img src="../../../assets/images/laravel.png" alt="seminar">
+            <p class="text-center text-sm p-2">Laravel 8 REST API's - Back-end Development</p>
+          </div>
+          <div class="divider"></div>
+        </div>
+        <div class="xl:col-3 sm:col-12 fadeinleft animation-duration-2000 animation-iteration-1 content-divider animation-delay-300">
+          <div class="content">
+            <img src="../../../assets/images/git.png" alt="seminar">
+            <p class="text-center text-sm p-2">Git / Github - Versioning Control</p>
+          </div>
+          <div class="divider"></div>
+        </div>
+        <div class="xl:col-3 sm:col-12 fadeinright animation-duration-2000 animation-iteration-1 content-divider animation-delay-300">
+          <div class="content">
+            <img src="../../../assets/images/clean coding.png" alt="seminar">
+            <p class="text-center text-sm p-2">Code Debugging</p>
+          </div>
+          <div class="divider"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+<!-- END OF CONTENT-->
+
+<div class="grid footer-container">
+  <div class="col-12 flex justify-content-around align-items-center p-3 flex-column flex-wrap">
+    <div class="col-12 flex flex-row justify-content-around align-items-center gap-4 flex-wrap">
+      <div class="xl:col-3 sm:col-12">
+        <div class="footer-information">
+          <p class="text-center xl:text-sm sm:text-xs"> TRAININGS </p>
+        <div class="divider"></div>
+        <ul class="mt-2">
+          <li class="text-450 xl:text-xs sm:text-xs">SOFTWARE DEVELOPMENT TRAINING PROGRAM (LEVEL 1) at Negros Occidental Language and Information Technology Center – S. Y 2020 (500 HRS) Completed</li>
+          <li class="text-450 xl:text-xs sm:text-xs">OFTWARE DEVELOPMENT TRAINING PROGRAM (LEVEL 2) at Negros Occidental Language and Information Technology Center – S. Y 2020 (500 HRS Online Training) Completed</li>
+        </ul>
+        </div>
+      </div>
+      <div class="xl:col-3 sm:col-12">
+        <div class="footer-information">
+          <p class="text-center xl:text-sm sm:text-xs"> EDUCATION </p>
+          <div class="divider"></div>
+          <ul class="mt-2">
+            <li class="text-450 xl:text-xs sm:text-xs">Elementary - Bubog Elementary School S.Y 2002 – 2008</li>
+            <li class="text-450 xl:text-xs sm:text-xs">Secondary - Dona Montserrat Lopez Memorial High School (DMLMHS) S.Y 2008 - 2012</li>
+            <li class="text-450 xl:text-xs sm:text-xs">College - Carlos Hilado Memorial State University (CHMSU) S.Y 2016 - 2020</li>
+          </ul>
+        </div>
+      </div>
+      <div class="xl:col-3 sm:col-12">
+        <div class="footer-information">
+          <p class="text-center xl:text-sm sm:text-xs"> CHARACTER REFRENCE </p>
+          <div class="divider"></div>
+          <ul class="mt-2">
+            <li class="text-450 xl:text-xs sm:text-xs">SOFTWARE DEVELOPMENT TRAINING PROGRAM (LEVEL 1) at Negros Occidental Language and Information Technology Center – S. Y 2020 (500 HRS) Completed</li>
+            <li class="text-450 xl:text-xs sm:text-xs">OFTWARE DEVELOPMENT TRAINING PROGRAM (LEVEL 2) at Negros Occidental Language and Information Technology Center – S. Y 2020 (500 HRS Online Training) Completed</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-6">
+      <h5  class="text-center xl:text-sm sm:text-xs text-600 p-2"><i class="pi pi-phone"></i> &nbsp; 09687056085</h5>
+      <h5 class="text-center xl:text-sm sm:text-xs text-600 p-2"><i class="pi pi-envelope"></i> &nbsp; winfort02@gmail.com</h5>
+      <h5 class="text-center xl:text-sm sm:text-xs text-600 p-2"> &copy; 2022 JERWIN FORTILLANO | PHILIPPINES</h5>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+

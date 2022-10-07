@@ -1,0 +1,129 @@
+.content-dev {
+  .cv-container {
+    position: relative;
+    width: 80%;
+    border: 1px solid rgb(177, 175, 175);
+    border-radius: 6px;
+    margin: 20px auto 20px auto;
+    box-shadow: 4px 2px 4px 2px rgb(197, 193, 193);
+    .header-content {
+      h5 {
+        letter-spacing: 4px;
+      }
+    }
+    
+    img.profile-image {
+      width: 180px !important;
+      height: 180px !important;
+      border-radius: 8px;
+      box-shadow: 5px 2px 5px 2px rgb(197, 193, 193);
+    }
+  
+    .career-container {
+      width: 90%;
+      margin: 0 auto 10px auto;
+    }
+  
+    .divider {
+      height: 2px;
+      border-radius: 6px;
+      width: 100%;
+      margin: 5px auto 0 auto;
+      background-color: rgb(28, 141, 240);
+    }
+  
+    .details-container {
+      width: 90%;
+      margin: 0 auto 10px auto;
+      .divider {
+        height: 2px;
+        border-radius: 6px;
+        width: 95%;
+        margin: 5px 0 5px 0;
+        background-color: rgb(28, 141, 240);
+      }
+    }
+  
+    .info-container {
+      width: 90%;
+      margin: 0 auto;
+  
+      .custom-list-styling {
+        width: 100%;
+        padding: 5px 0;
+        list-style: circle ;
+  
+        li {
+          width: 80%;
+          padding: 5px;
+        }
+      }
+  
+      .custom-styling-table {
+        width: 100%;
+        padding: 5px 0;
+        tbody {
+          padding: 5px;
+          tr {
+            margin: 5px 0;
+          }
+          td {
+            padding: 6px;
+          }
+        }
+      }
+    }
+  
+    .refrence-container {
+      width: 90%;
+      margin: 0 auto;
+    }
+    .curve {
+      position: absolute;
+      height: 255px;
+      width: 100%;
+      bottom: 0;
+    }
+  
+    .curve::after {
+      content: '';
+      display: none;
+      position: absolute;
+      border-radius: 0% 75% 0% 25%;
+      width: 52%;
+      height: 100%;
+      background-color: rgb(28, 141, 240);
+      transform: translate(0%, 1px);
+      z-index: -1;
+    }
+
+    .curve-2 {
+      position: absolute;
+      height: 255px;
+      width: 100%;
+      top: 0;
+    }
+  
+    .curve-2::after {
+      content: '';
+      display: none;
+      position: absolute;
+      border-radius: 0% 25% 0% 85%;
+      width: 52%;
+      height: 100%;
+      background-color: rgb(28, 141, 240);
+      transform: translate(93%, 0%);
+      z-index: -1;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .curve::after {
+      display: block !important;
+    }
+    .curve-2::after { 
+      display: block !important;
+    }
+  }
+}
+

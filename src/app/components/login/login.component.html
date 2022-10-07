@@ -1,0 +1,20 @@
+<p-toast [baseZIndex]="6000"></p-toast>
+  <div class="login-container">
+    <h5 class="text-center text-2xl p-5">LOGIN</h5>
+      <div class="p-fluid grid flex align-items-center justify-content-center flex-direction-column">
+        <div class="col-10 mt-2">
+          <label for="Email" class="text-sm">Email</label>
+          <input id="email" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid dark-border border-round appearance-none outline-none focus:border-primary w-full" [(ngModel)]="userModel.email">
+        </div>
+        <div class="col-10 mt-2">
+          <label for="password" class="text-sm">Password</label>
+          <input id="password" type="password" class="text-base text-color surface-overlay p-2 border-1 border-solid dark-border border-round appearance-none outline-none focus:border-primary w-full" [(ngModel)]="userModel.password" >
+        </div>
+        <div class="col-10 mt-3">
+          <button pButton type="button" label="Sign-in" class="p-button-sm" (click)="signIn()" ></button>
+        </div>
+        <div class="col-10">
+          <p class="text-sm">You don't have account ? Register here  <span class="text-md text-primary sign-up-link" (click)="register()"> Sign-up </span></p>
+        </div>
+      </div>
+  </div>

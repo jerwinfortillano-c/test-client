@@ -36,7 +36,7 @@ export class CareerGoalService {
     }
     return new Observable<[boolean, CareerGoal]>((observer) => {
 
-      this.http.post(APIURL + '/goal/create-goal', data, httpOptions).subscribe(
+      this.http.post(APIURL + '/goal/create-goal', career_data, httpOptions).subscribe(
         (response: any) => {
           
           let data = response;

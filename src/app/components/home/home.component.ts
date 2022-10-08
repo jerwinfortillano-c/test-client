@@ -11,6 +11,7 @@ export class HomeComponent implements OnInit {
   loadObjectives: boolean = false;
   loadSeminars: boolean = false;
   loadSkills: boolean = false;
+  
 
   @HostListener('window:scroll', ['$event']) // for window scroll events
     onScroll(e: any) {

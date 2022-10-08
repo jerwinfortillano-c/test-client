@@ -122,7 +122,6 @@ export class GoalsComponent implements OnInit {
     this.lastTableLazyLoadEvent = e;
     this.careerGoalService.getAllCareerGoals().subscribe((response: any) => {
       let data = response[1];
-      console.log(response)
       if(response[0] == true) {
         this.career_goals = data;
         setTimeout(() => {

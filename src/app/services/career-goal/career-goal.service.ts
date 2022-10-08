@@ -55,8 +55,6 @@ export class CareerGoalService {
     return new Observable<[boolean, any[]]>((observer) => {
       let career_goals: CareerGoal[] = [];
 
-      console.log(httpOptions)
-
       this.http
         .get<any>(APIURL + '/goal/career-list', httpOptions)
         .subscribe(

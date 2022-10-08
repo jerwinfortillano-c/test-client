@@ -15,7 +15,6 @@ export class HomeComponent implements OnInit {
 
   @HostListener('window:scroll', ['$event']) // for window scroll events
     onScroll(e: any) {
-      console.log(window.scrollY);
       if(window.scrollY > 175) {
         this.loadSeminars = true;
       }

@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
   register() {
     this.ref = this.dialogService.open(RegisterComponent, {
       header: 'Create Account',
-      width: '425px',
+      width: '550px',
       height: '480px',
       contentStyle: {
         'max-height': '800px',

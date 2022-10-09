@@ -23,7 +23,7 @@ const routes: Routes = [
       {path: 'career-goals', canActivate: [SofwareActivatedRoute], component: GoalsComponent},
     ]
   },
-  { path: '**', redirectTo: ''},
+  { path: '**', redirectTo: '/software'},
 ];
 
 @NgModule({
